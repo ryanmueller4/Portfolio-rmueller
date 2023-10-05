@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+html{
+    scroll-behavior: smooth;;
+  }
+
 body {
     background-image: linear-gradient(to right, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -39,11 +43,10 @@ body {
 .header nav ul li {
     display: inline-block;
     margin-left: 20px;
-    
 }
 
 a {
-    color: #ffffff;
+    color: white;
     text-decoration: underline;
 }
 
@@ -54,4 +57,37 @@ a {
     background-size: cover;
     background-position: center;
     border: 5px solid white;
+    margin-bottom: 30px;
+}
+
+main {
+    height: 1000px;
+    margin-left: 200px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me, .work, .contact-me {
+    display: flex;
+    align-items: flex-end;
+    font-size: 36px;
+    color: white;
+    margin: 15px;
+    width: 20%;
+}
+
+.about-me-info, .work-info, .contact-me-info {
+    margin-left: 45px;
+    font-size: 24px;
+    justify-content: center;
 }

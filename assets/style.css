@@ -144,7 +144,7 @@ body {
     margin-bottom: 60px;
 }
 
-/*Lines 137-161 formats the images with flexbox in the work-info section*/
+/*Lines 148-172 format the images with flexbox in the work-info section*/
 .work-info ul {
     display:block;
     flex-wrap: wrap;

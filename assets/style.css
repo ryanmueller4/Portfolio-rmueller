@@ -4,30 +4,35 @@
     margin: 0;
 }
 
+/*Creates a smooth scroll when using nav elements*/
 html{
-    scroll-behavior: smooth;;
+    scroll-behavior: smooth;
   }
 
+/*Sets background gradient color and font-family for body element*/
 body {
     background-image: linear-gradient(to right, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/*Creates black background, makes text color white, and adds padding to top and bottom of header class*/
 .header {
     padding: 50px 0;
     background-color: black;
     color: white;
 }
 
+/*Formats h1 ("Ryan Mueller")*/
 .header h1 {
     padding-left: 60px;
     padding-right: 40px;
     display: inline-block;
-    font-size: 48px;
+    font-size: 50px;
     background-color: white;
     color: black;
 }
 
+/*Lines 36-55 adds formatting to display nav section on right side of h1 and in inline-block display*/
 .header nav {
     padding-top: 5px;
     margin-right: 150px;
@@ -45,14 +50,49 @@ body {
     margin-left: 20px;
 }
 
-a {
+.header nav a {
     color: white;
+}
+
+/*Lines 58-90 format the footer element*/
+.footer {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 25px 0;
+    color: black;
+}
+
+.footer h3 {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    padding: 10px
+}
+
+.footer .contact-info{
+    text-align: center;
+    font-size: 28px;
+}
+
+.footer .contact-info ul {
+    list-style-type: none;
+}
+
+.footer .contact-info ul li {
+    display: inline-block;
+    margin-left: 20px;
     text-decoration: underline;
 }
 
+.footer a {
+    color: black;
+    text-decoration: underline;
+}
+
+/*Formats the display picture under the header, a background-image is used due to the fact that the image is for decorative purposes*/
 .main-picture {
-    height: 215px;
-    width: 100%;
+    min-height: 200px;
+    width: auto;
     background-image: url("./images/portfolio-img2.png");
     background-size: cover;
     background-position: center;
@@ -60,34 +100,197 @@ a {
     margin-bottom: 30px;
 }
 
-main {
-    height: 1000px;
-    margin-left: 200px;
-}
-
+/*Defines row class for flexbox*/
 .row {
+    min-height: 200px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
+/*Defines column class for flexbox*/
 .column {
+    width: 70%;
     display: flex;
+    flex-wrap:wrap;
     flex-direction: column;
 }
 
-.about-me, .work, .contact-me {
-    display: flex;
-    align-items: flex-end;
+/*Formats captions "About Me" and "Work"*/
+.about-me, .work{
     font-size: 36px;
     color: white;
-    margin: 15px;
     width: 20%;
+    margin-left: 25px;
+    text-align: center;
 }
 
-.about-me-info, .work-info, .contact-me-info {
-    margin-left: 45px;
-    font-size: 24px;
-    justify-content: center;
+.about-me img {
+    width: 100%;
+    padding-right: 10px
+}
+
+/*Formats the about-me-info section*/
+.about-me-info {
+    padding: 15px;
+    border: 3px solid white;
+    font-size: 36px;
+    justify-content: flex-start;
+}
+
+/*Adds a margin below the first flexbox row, the about me section*/
+.firstrow {
+    margin-bottom: 60px;
+}
+
+/*Lines 137-161 formats the images with flexbox in the work-info section*/
+.work-info ul {
+    display:block;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.work-info ul li {
+    flex: 0 1 49%;
+}
+
+.work-info ul li img {
+    width: 100%;
+}
+
+.work-info ul li.first img {
+    width: 100%;
+    border: 3px solid white;
+}
+
+.placeholder {
+    width: 49.6%;
+    display: inline-flex;
+    border: 3px solid white;
+}
+
+/*.horiseon-container, .horiseon-caption, and .horiseon-caption a are responsible for the text appearing over the first image in work-info*/
+.horiseon-container {
+    position: relative;
+}
+
+.horiseon-caption {
+    position: absolute;
+    bottom: 70px;
+    background-color: black;
+    padding: 20px;
+    font-size: 26px;
+    border: 3px solid white;
+}
+
+.horiseon-caption a {
+    color: white;
+}
+
+/*The remaining code consists of media queries which change elements of the webpage at screen widths: 992px, 800px, 710px, 670px, 500px, 405px, and 380px
+This allows for the site to be responsive based on user screen size.*/
+@media screen and (max-width: 992px) {
+    .header nav ul li {
+        text-align: center;
+        font-size: 30px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .header nav {
+        margin-right: 0%;
+        float: none;
+        text-align: center;
+    }
+
+    .header h1 {
+        width: 100%;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 40px;
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    .about-me, .work {
+        font-size: 24px;
+        width: 15%;
+        margin-right: 15px;
+
+    }
+
+    .about-me-info {
+        font-size: 20px;
+    }
+
+    .footer h3 {
+        font-size: 28px
+    }
+
+    .footer ul li {
+        font-size: 20px;
+    }
+
+    .horiseon-caption {
+        font-size: 20px;
+        bottom: 50px;
+    }
+  }
+
+@media screen and (max-width: 710px) {
+    .placeholder {
+        width: 49.3%
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+    .about-me, .work {
+        font-size: 20px;
+    }
+
+    .about-me-info {
+        font-size: 18px;
+    }
+
+    .horiseon-caption {
+        font-size: 18px;
+        bottom: 35px;
+    }
+  }
+
+@media screen and (max-width: 500px) {
+    .about-me, .work {
+        font-size: 16px;
+    }
+
+    .about-me-info {
+        font-size: 14px;
+    }
+
+    .horiseon-caption {
+        font-size: 14px;
+        bottom: 30px;
+        padding: 15px;
+    }
+}
+
+
+@media screen and (max-width: 405px) {
+    .placeholder {
+        width: 49%
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .about-me, .work {
+        font-size: 14px;
+    }
+
+    .about-me-info {
+        font-size: 14px;
+    }
 }

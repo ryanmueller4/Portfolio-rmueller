@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--Defines the head element-->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
         <title>Portfolio</title>
     </head>
 
+<!--Defines body element containing all visible content on the page-->
     <body>
         <header class="header">
             <h1>Ryan Mueller</h1>
@@ -22,40 +24,74 @@
                     <li>
                         <a href="#contact-me">Contact Me</a>
                     </li>
-                    <li>
-                        <a href="#resume">Resume</a>
-                    </li>
                 </ul>
             </nav>
         </header>
 
+<!--Main display picture under the header-->
         <div class="main-picture"></div>
-    
+
+<!--Defines main element containing the about me and work sections-->
         <main>
-            <section  class="row">
+            <section  class="firstrow row">
                 <section id="about-me" class="about-me column">
-                    <p>About Me</p>
+                    <img src="./assets/images/about-me-pic.jpg" alt="Picture of myself">
+                    <h2>About Me</h2>
                 </section>
                 <section class="about-me-info column">
-                    <p>This is my about me.</p>
+                    <p>My name is Ryan Mueller, and I am currently a student learning about front-end web development so that I can become a full time web developer. However, I also aspire to one day expand my tech skills enough to create and publish my own video games. My current job is a cook at a local coffee shop. My hobbies include drawing, playing video games and guitar, and listening to music.</p>
                 </section>
             </section>
             <section class="row">
                 <section id="work" class="work column">
-                    <p>Work</p>
+                    <h2>Work</h2>
                 </section>
                 <section class="work-info column">
-                    <p>This is my work.</p>
+                    <ul>
+                        <li class="first">
+                            <div class="horiseon-container">
+                                <a href="https://ryanmueller4.github.io/Horiseon-Marketing-Webpage/"><img src="./assets/images/digital-marketing-meeting.jpg" alt="Horiseon webpage refactor project"></a>
+                                <div class="horiseon-caption">
+                                    <a href="https://ryanmueller4.github.io/Horiseon-Marketing-Webpage/">Horiseon Marketing</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="placeholder">
+                            <img src="./assets/images/placeholder.png" alt="placeholder image for second linked work">
+                        </li>
+                        <li class="placeholder">
+                            <img src="./assets/images/placeholder.png" alt="placeholder image for third linked work">
+                        </li>
+                        <li class="placeholder">
+                            <img src="./assets/images/placeholder.png" alt="placeholder image for fourth linked work">
+                        </li>
+                        <li class="placeholder">
+                            <img src="./assets/images/placeholder.png" alt="placeholder image for fifth linked work">
+                        </li>
+                    </ul>
                 </section>
             </section>
-            <section class="row">
-                <section id="contact-me" class="contact-me column">
-                    <p>Contact Me</p>
-                </section>
-                <section class="contact-me-info column">
-                    <p>This is my contact info.</p>
-                </section>
-            </section>
+
         </main>
+
+<!--Defines the footer element which contains the contact me section-->
+        <footer id="contact-me"class="footer">
+            <h3>Contact Me:</h3>
+            <section class="contact-info">
+                <ul>
+                    <li>
+                        <a href="https://github.com/ryanmueller4">Github</a>
+                    </li>
+                    <li>
+                        <p>sixstrings22@outlook.com</p>
+                    </li>
+                    <li>
+                        <p>636-249-8501</p>
+                    </li>
+
+                </ul>
+            </section>
+        </footer>
+
     </body>
 </html>

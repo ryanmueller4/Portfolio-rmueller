@@ -165,18 +165,18 @@ body {
     border: 3px solid white;
 }
 
-.placeholder {
+.other {
     width: 49.6%;
     display: inline-flex;
     border: 3px solid white;
 }
 
-/*.horiseon-container, .horiseon-caption, and .horiseon-caption a are responsible for the text appearing over the first image in work-info*/
-.horiseon-container {
+
+.recipebook-container, .horiseon-container {
     position: relative;
 }
 
-.horiseon-caption {
+.recipebook-caption, .horiseon-caption {
     position: absolute;
     bottom: 70px;
     background-color: black;
@@ -185,7 +185,7 @@ body {
     border: 3px solid white;
 }
 
-.horiseon-caption a {
+.recipebook-caption a, .horiseon-caption a {
     color: white;
 }
 
@@ -234,14 +234,14 @@ This allows for the site to be responsive based on user screen size.*/
         font-size: 20px;
     }
 
-    .horiseon-caption {
+    .recipebook-caption {
         font-size: 20px;
         bottom: 50px;
     }
   }
 
 @media screen and (max-width: 710px) {
-    .placeholder {
+    .other {
         width: 49.3%
     }
 
@@ -256,7 +256,7 @@ This allows for the site to be responsive based on user screen size.*/
         font-size: 18px;
     }
 
-    .horiseon-caption {
+    .recipebook-caption {
         font-size: 18px;
         bottom: 35px;
     }
@@ -271,7 +271,7 @@ This allows for the site to be responsive based on user screen size.*/
         font-size: 14px;
     }
 
-    .horiseon-caption {
+    .recipebook-caption {
         font-size: 14px;
         bottom: 30px;
         padding: 15px;
@@ -280,7 +280,7 @@ This allows for the site to be responsive based on user screen size.*/
 
 
 @media screen and (max-width: 405px) {
-    .placeholder {
+    .other {
         width: 49%
     }
 }
